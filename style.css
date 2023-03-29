@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+a{
+	text-decoration: none;
+	color: white;
+	font-family: 'Bad Script', cursive;
+}
+body{
+	background:#bdc5ef ;
+}
+label{
+	display: none;
+	position: relative;
+	width: 25px;
+	height: 25px;
+}
+#box{
+	display: none;
+	position: fixed;
+}
+.mobil_menu{
+	position: fixed;
+	width: 350px;
+	height: 100vh;
+	display: flex;
+	top: 0;
+	left: -350px;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	background-color: #3f51b5;
+	padding: 32px;
+	visibility: hidden;
+	transition: 1s ;
+	box-sizing: border-box;
+}
+.item{
+	margin: 10px 0;
+}
+.lain{
+	position: fixed;
+	display: block;
+	background: rgb(58, 58, 197);
+	width: 25px;
+	height: 5px;
+	transition: 1s ;
+}
+.lain::before{
+	position: fixed;
+	position: absolute;
+	top: -8px;
+	transition: 1s ;
+	content: "";
+	display: block;
+	background: red;
+	width: 25px;
+	height: 5px;
+}
+.lain::after{
+	position: fixed;
+	position: absolute;
+	top: 8px;
+	content: "";
+	transition: 1s ;
+	display: block;
+	background: red;
+	width: 25px;
+	height: 5px;
+}
+label{
+	z-index: 5;
+	display: block;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+#box:checked~.mobil_menu{
+	visibility: visible;
+	left: 0;
+}
+#box:checked~label>span{
+	transform: rotate(45deg);
+}
+#box:checked~label>span::before{
+	transform: rotate(90deg);
+	top: 0;
+}
+#box:checked~label>span::after{
+	transform: rotate(90deg);
+	top: 0;
+}
+
+h1{
+	font-family: 'Bad Script', cursive;
+	text-align: center;
+	margin-top: 100px;
+	font-size: 55px;
+	margin-bottom: 100px;
+}
+p{
+	font-family: 'Bad Script', cursive;
+	text-align: center;
+	font-size: 25px;
+	margin-top:5px;
+
+}
+h2{
+	font-family: 'Bad Script', cursive;
+	text-align: center;
+	font-size: 40px;
+
+}
+a{
+	font-size: 20px;
+}
+.ben{
+	margin-top: 500px;
+}
+.b{
+	font-family: 'Bad Script', cursive;
+	text-align: center;
+	font-size: 40px;
+	margin-top:250px ;
+}
+.text_b{
+	text-align: center;
+	font-size: 25px;
+	margin-top:100px;
+}
+#c{
+	margin-top: 150px;
+}
+.text_c{
+	margin-top: 100px;
+}
+#d{
+	margin-top: 210px;
+}
+.text_d{
+	margin-top: 100px;
+}
+img{
+	display: block;
+	width: 200px;
+	margin: auto;
+}
+.tit{
+	font-size: 25px;
+}
+.super{
+	
+	margin-top: 100px;
+}
+@media(max-width: 425px){
+	p{
+		font-size: 13px;
+	}
+	.text_1{
+		font-size: 25px;
+	}
+	.text_b{
+		font-size: 13px;
+	}
+}
